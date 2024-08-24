@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  font-size: 1.4rem;
+}
+
+h1 {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-size: 2.4rem;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 1000000;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  color: #000;
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+.navbar .logo span {
+  color: #C06B3E;
+}
+
+.navbar .menu-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.dropbtn {
+  color: #000;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.dropbtn:hover {
+  color: #C06B3E !important;
+  cursor: pointer !important;
+}
+
+#menu-btn {
+  color: #000;
+  cursor: pointer;
+  display: none;
+}
+
+#close-menu-btn {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+}
+
+.container__item {
+  margin: 0 auto 40px;
+}
+
+.landing-page-container {
+  width: 100%;
+  min-height: 100%;
+  height: 90rem;
+  background-image: url("https://s29.postimg.org/vho8xb2pj/landing_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  color: #09383E;
+}
+
+.content__wrapper {
+  max-width: 1200px;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  height: 2rem;
+  padding: 4.5rem 0;
+  display: block;
+}
+
+.menu-icon {
+  width: 2.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.header__item {
+  display: inline-block;
+  float: left;
+}
+
+.menu-icon__line {
+  width: 1.5rem;
+  height: 0.2rem;
+  background-color: #0C383E;
+  display: block;
+}
+.menu-icon__line:before, .menu-icon__line:after {
+  content: "";
+  width: 1.5rem;
+  height: 0.2rem;
+  background-color: #0C383E;
+  display: inline-block;
+  position: relative;
+}
+.menu-icon__line:before {
+  left: 0.5rem;
+  top: -0.6rem;
+}
+.menu-icon__line:after {
+  top: -1.8rem;
+}
+
+.heading {
+  width: 90%;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.7rem;
+  text-align: center;
+}
+
+.social-container {
+  width: 7.25rem;
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  float: right;
+}
+.social-container .social__icon {
+  float: left;
+  cursor: pointer;
+}
+
+.social-container .social__icon.social__icon--dr {
+  margin-left: 0.5rem;
+}
+.social-container .social__icon.social__icon--dr img {
+  height: 2rem;
+}
+.social-container .social__icon.social__icon--in {
+  margin-left: 0.75rem;
+}
+.social-container .social__icon.social__icon--in img {
+  height: 2rem;
+}
+.social-container .social__icon.social__icon--fb img {
+  height: 2rem;
+  margin: 0rem;
+}
+
+
+header {
+    background-color: white;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+main {
+    margin-top: 60px;
+}
+
+.broadcast {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.broadcast h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #0a3d62;
+}
+
+.updates {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.update {
+    background-color: #eaf0f1;
+    padding: 15px;
+    border-left: 5px solid #0a3d62;
+    border-radius: 4px;
+}
+
+.update h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #079992;
+}
+
+.update p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.timestamp {
+    font-size: 14px;
+    color: #555;
+}
+
+
+@-webkit-keyframes ellipsesRotate {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(-405deg);
+  }
+}
+
+@keyframes ellipsesRotate {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(-405deg);
+  }
+}
+@-webkit-keyframes ellipsesOrbit {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes ellipsesOrbit {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  header.show-mobile-menu::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+  }
+
+  #close-menu-btn, #menu-btn {
+    display: block;
+  }
+  .navbar .menu-links {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    flex-direction: column;
+    width: 260px;
+    height: 100vh;
+    background: white;
+    padding: 70px 40px 0;
+    transition: left 0.15s ease;
+  }
+
+  header.show-mobile-menu .navbar .menu-links {
+    left: 0;
+  }
+
+  .navbar a {
+    color: #000;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  img {
+    width: 80%;
+    height: auto;
+  }
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #D3D3D3;
+  color: #C06B3E;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  color: #C06B3E;
+}
+
+body {
+  background-color: #D3D3D3;
+}

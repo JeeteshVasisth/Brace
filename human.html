@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Contacts</title>
+    <link rel="stylesheet" href="/human.css">
+    <header>
+        <nav class="navbar">
+            <a href="/index.html" class="logo">
+                <img style="width: 90px;" src="images/brace.png" />    
+            </a>
+          <ul class="menu-links">
+              <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+            <div class="dropdown">
+                <button class="dropbtn">Emergency</button>
+                <div class="dropdown-content">
+                  <a href="/help.html">Help</a>
+                  <a href="/broadcast.html">Broadcast</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Community</button>
+                <div class="dropdown-content">
+                  <a href="/volunteer.html">Volunteer</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Assistance</button>
+                <div class="dropdown-content">
+                  <a href="/assistance.html">AI</a>
+                  <a href="/human.html">Human</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Management</button>
+                <div class="dropdown-content">
+                  <a href="/precautions.html">Precaution</a>
+                  <a href="/post.html">Post disaster</a>
+                </div>
+            </div>
+          </ul>
+          <span id="menu-btn" class="material-symbols-outlined">menu</span>
+        </nav>
+
+    </header>
+</head>
+<body>
+    <div class="container">
+        <h1>Emergency Contacts</h1>
+        <div class="contact" id="contact1">
+            <h2>Fire Department</h2>
+            <p>Phone: <a href="tel:101" class="phone-link">101</a></p>
+            <button onclick="dialNumber('101')">Dial</button>
+        </div>
+        <div class="contact" id="contact2">
+            <h2>Police Department</h2>
+            <p>Phone: <a href="tel:100" class="phone-link">100</a></p>
+            <button onclick="dialNumber('100')">Dial</button>
+        </div>
+        <div class="contact" id="contact3">
+            <h2>Ambulance Service</h2>
+            <p>Phone: <a href="tel:102" class="phone-link">102</a></p>
+            <button onclick="dialNumber('102')">Dial</button>
+        </div>
+    </div>
+    <script src="/human.js"></script>
+</body>
+</html>
