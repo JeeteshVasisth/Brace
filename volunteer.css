@@ -229,8 +229,6 @@ header .navbar {
   cursor: pointer;
   display: none;
   font-size: 30px;
-  margin-top: -5px;
-  display: inline-block;
 }
 
 #close-menu-btn {
@@ -241,8 +239,6 @@ header .navbar {
   top: 20px;
   cursor: pointer;
   font-size: 30px;
-  margin-top: -5px;
-  display: inline-block;
 }
 
 .container {
