@@ -76,6 +76,7 @@ header .navbar {
   color: white;
   cursor: pointer;
   display: none;
+  font-size: 30px;
 }
 
 #close-menu-btn {
@@ -85,6 +86,7 @@ header .navbar {
   right: 20px;
   top: 20px;
   cursor: pointer;
+  font-size: 30px;
 }
 
 .container {
