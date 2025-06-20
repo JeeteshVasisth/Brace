@@ -337,14 +337,13 @@ p {
     width: 100%;
     height: 100%;
     backdrop-filter: blur(5px);
+    z-index: 10;
   }
 
    header.hide-navbar {
      position:static ;
    }
-   header.menu-links.show{
-     position:fixed;
-   }
+  
 
   #close-menu-btn, #menu-btn {
     display: block;
