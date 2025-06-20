@@ -9,7 +9,7 @@ export async function handler(event, context) {
   } catch {
     // default to natural disaster
   }
-   const url = `https://newsapi.org/v2/top-headlines?q=${encodeURIComponent(keyword)}&category=science&language=en&pageSize=${pageSize}`;
+   const url = `https://newsapi.org/v2/top-headlines?q=${encodeURIComponent(keyword)}&category=science&language=en&pageSize=10`;
 
   try {
     const response = await fetch(url, {
