@@ -24,7 +24,7 @@
         const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
         let words = text.split(" ");
         let index = 0;
-        function printWordByWord{
+        function printWordByWord(){
             if (index < words.length) {
                 outputElement.innerHTML += words[index] + " ";
                 index++;
