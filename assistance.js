@@ -28,8 +28,13 @@
             if (index < words.length) {
                 outputElement.innerHTML += words[index] + " ";
                 index++;
+                console.log(outputElement)
+                console.log(outputElement.innerHTML)
+                console.log(words)
+                console.log(index)
                 setTimeout(printWordByWord, 50); // 300 ms delay
-                console.log(outputElement,outputElement.innerHTML)
+                
+                
                 }
             else{
                 outputElement.innerHTML = text || "I failed to load a response for you right now. please refresh...";
