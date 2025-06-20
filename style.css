@@ -45,6 +45,7 @@ header .navbar {
   margin: 0 auto;
   justify-content: space-between;
 }
+
 .navbar .logo {
   color: #000;
   font-size: 2.1rem;
@@ -337,7 +338,17 @@ p {
     height: 100%;
     backdrop-filter: blur(5px);
   }
-
+  header.hide-navbar::before {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+  
+}
+   header.hide-navbar::after {
+     display: hidden;
+   }
   #close-menu-btn, #menu-btn {
     display: block;
   }
