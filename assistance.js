@@ -23,7 +23,7 @@
         // 👇 Properly access the Gemini response text
         const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
         
-        outputElement.innerHTML = text || "No response from Gemini.";
+        outputElement.innerHTML = text || "I failed to load a response for you right now. please refresh..";
 
         
         console.log(data)
@@ -34,10 +34,11 @@
         inputElement.value = ""
         clearInterval(interval)
         console.log(e)
-        outputElement.innerHTML = "I failed to load a response for you right now..."
+        outputElement.innerHTML = "I failed to load a response for you right now. please refresh.."
           
         }
     }
+    getGeminiResponse("hi");
     submitButton.addEventListener("click", getGeminiResponse);
     const header = document.querySelector("header");
     const menuBtn = document.querySelector("#menu-btn");
