@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+/* document.addEventListener('DOMContentLoaded', function() {
     const toggleButton = document.getElementById('toggleButton');
     const animatedGif = document.getElementById('animatedGif');
 
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
+*/
 
 const header = document.querySelector("header");
 const menuBtn = document.querySelector("#menu-btn");
