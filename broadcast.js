@@ -1,27 +1,3 @@
-async function fetchDisasterNews() {
-  const keyword = "natural disaster";
-
-  const res = await fetch("/.netlify/functions/disasterNews", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ keyword }),
-  });
-  const data = await res.json();
-  console.log(data)
-  
-  if (data.articles?.length) {
-    data.articles.forEach(article => {
-      updates.push({
-          title: article.title,
-          content: article.description,
-          timestamp: article.publishedAt
-      });
-    });
-  } else {
-    list.innerHTML = "<li>No recent disaster news found.</li>";
-  }
-}
-fetchDisasterNews()
 const updates = [
     {
         title: "Landslide Alert",
@@ -34,6 +10,29 @@ const updates = [
         timestamp: "Updated 20 hours ago"
     }
 ];
+async function fetchDisasterNews() {
+  const keyword = "natural disaster";
+
+  const res = await fetch("/.netlify/functions/disasterNews", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ keyword }),
+  });
+  const data = await res.json();
+  console.log(data)
+  
+ 
+  data.articles.forEach(article => {
+    updates.push({
+        title: article.title,
+        content: article.description,
+        timestamp: article.publishedAt
+    });
+  });
+  
+}
+fetchDisasterNews()
+
 
 function addUpdates() {
     const updatesContainer = document.querySelector('.updates');
