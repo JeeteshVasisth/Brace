@@ -32,7 +32,7 @@
                 console.log(outputElement.innerHTML)
                 console.log(words);
                 console.log(index);
-                setTimeout(printWordByWord, 50); // 300 ms delay
+                setTimeout(printWordByWord, 200); // 300 ms delay
                 
                 
                 }
