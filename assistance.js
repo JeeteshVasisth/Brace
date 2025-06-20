@@ -42,6 +42,7 @@
                 console.log(index);
             }
         }
+        printWordByWord();  
         console.log(typeof text);
 
         
