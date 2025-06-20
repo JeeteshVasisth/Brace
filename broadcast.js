@@ -12,7 +12,7 @@ async function fetchDisasterNews() {
       updates.push({
           title: article.title,
           content: article.description,
-          timestamp: article.publishedAt;
+          timestamp: article.publishedAt
       });
     });
   } else {
