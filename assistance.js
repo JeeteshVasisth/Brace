@@ -56,7 +56,7 @@
     }
     getGeminiResponse("hi");
     submitButton.addEventListener("click", getGeminiResponse);
-    input.addEventListener("keypress", function(event) {
+    inputElement.addEventListener("keypress", function(event) {
       // If the user presses the "Enter" key on the keyboard
           if (event.key === "Enter") {
             // Cancel the default action, if needed
