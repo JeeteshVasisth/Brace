@@ -1,15 +1,5 @@
-const updates = [
-   /* {
-        title: "Landslide Alert",
-        content: "A landslide has occurred in the area of Wayanad, Kerala. Number of dead rises to 288, rescue ops on war footing.",
-        timestamp: "Updated 1 day ago",
-    },*/
-    {
-        title: "Flood Warning",
-        content: "Heavy rains have caused flooding in parts of Delhi. Schools closed, major.",
-        timestamp: "Updated 20 hours ago"
-    }
-];
+const updates = [];
+
 async function fetchDisasterNews() {
   const keyword = "natural disaster";
 
@@ -26,7 +16,8 @@ async function fetchDisasterNews() {
     updates.push({
         title: article.title,
         content: article.description,
-        timestamp: article.publishedAt
+        timestamp: article.publishedAt,
+        link: article.url
     });
   });
   addUpdates();
@@ -40,7 +31,7 @@ function addUpdates() {
         const updateDiv = document.createElement('div');
         updateDiv.className = 'update';
         updateDiv.innerHTML = `
-            <h3>${update.title}</h3>
+            <a href=${update.link}>${update.title}</a>
             <p>${update.content}</p>
             <span class="timestamp">${update.timestamp}</span>
         `;
