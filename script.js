@@ -20,7 +20,7 @@ const closeMenuBtn = document.querySelector("#close-menu-btn");
 
 menuBtn.addEventListener("click", () => {
   header.classList.toggle("show-mobile-menu");
-  header.classList.togglt("hide-navbar");
+  header.classList.toggle("hide-navbar");
 })
 
 closeMenuBtn.addEventListener("click", () => {
