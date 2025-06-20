@@ -348,6 +348,7 @@ p {
 }
    header.hide-navbar::after {
      display: none;
+     visibility: hidden;
      
    }
   #close-menu-btn, #menu-btn {
