@@ -1,16 +1,15 @@
 export async function handler(event, context) {
-  let keyword = "natural disaster"; // Default keyword
+  let keyword = "natural disaster"; // Default fallback
 
   try {
-    const body = JSON.parse(event.body || "{}"); // Fallback to empty object
+    const body = JSON.parse(event.body || "{}");
     if (body.keyword) {
-      keyword = body.keyword; // Don't double-encode here
+      keyword = body.keyword;
     }
-  } catch (err) {
-    console.warn("Invalid JSON body. Using default keyword.");
+  } catch {
+    console.warn("Invalid JSON received. Using default keyword.");
   }
 
-  // ✅ Only encode when inserting into the URL
   const url = `https://newsapi.org/v2/top-headlines?q=${encodeURIComponent(keyword)}&category=science&language=en&pageSize=10`;
 
   try {
