@@ -26,12 +26,14 @@
         let index = 0;
 
         if (index < words.length) {
-        outputElement.innerHTML += words[index] + " ";
-        index++;
-        setTimeout(printWordByWord, 300); // 300 ms delay
+            outputElement.innerHTML += words[index] + " ";
+            index++;
+            setTimeout(printWordByWord, 300); // 300 ms delay
     }
         else{
-        outputElement.innerHTML = text || "I failed to load a response for you right now. please refresh..";
+            outputElement.innerHTML = text || "I failed to load a response for you right now. please refresh...";
+            console.log(words)
+            console.log(index)
         }
         
         console.log(data)
