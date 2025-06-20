@@ -21,19 +21,8 @@ async function fetchDisasterNews() {
     list.innerHTML = "<li>No recent disaster news found.</li>";
   }
 }
-
-const updates = [
-    {
-        title: "Landslide Alert",
-        content: "A landslide has occurred in the area of Wayanad, Kerala. Number of dead rises to 288, rescue ops on war footing.",
-        timestamp: "Updated 1 day ago",
-    },
-    {
-        title: "Flood Warning",
-        content: "Heavy rains have caused flooding in parts of Delhi. Schools closed, major.",
-        timestamp: "Updated 20 hours ago"
-    }
-];
+fetchDisasterNews();
+const updates = [];
 
 function addUpdates() {
     const updatesContainer = document.querySelector('.updates');
