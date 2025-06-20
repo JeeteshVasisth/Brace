@@ -28,10 +28,8 @@ async function fetchDisasterNews() {
         content: article.description,
         timestamp: article.publishedAt
     });
-  addUpdates();
-
   });
-  
+  addUpdates();
 }
 fetchDisasterNews()
 console.log(updates)
