@@ -10,8 +10,8 @@ async function fetchDisasterNews() {
   if (data.articles?.length) {
     data.articles.forEach(article => {
       updates.push({
-          title: article.title;
-          content: article.description;
+          title: article.title,
+          content: article.description,
           timestamp: article.publishedAt;
       })
     });
