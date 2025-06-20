@@ -1,16 +1,16 @@
 export async function handler(event, context) {
-  let keyword = "natural disaster"; // Default fallback
 
+  let keyword = "natural disaster";
   try {
-    const body = JSON.parse(event.body || "{}");
+    const body = JSON.parse(event.body);
     if (body.keyword) {
-      keyword = body.keyword;
+      keyword = encodeURIComponent(body.keyword);
     }
   } catch {
-    console.warn("Invalid JSON received. Using default keyword.");
+    // default to natural disaster
   }
 
-  const url = `https://newsapi.org/v2/top-headlines?q=${encodeURIComponent(keyword)}&category=science&language=en&pageSize=10`;
+  const url = `https://newsapi.org/v2/everything?q=${keyword}&language=en&sortBy=publishedAt&pageSize=5`;
 
   try {
     const response = await fetch(url, {
@@ -21,11 +21,11 @@ export async function handler(event, context) {
 
     const data = await response.json();
 
-    const articles = (data.articles || []).map(article => ({
+    const articles = data.articles.map(article => ({
       title: article.title,
       url: article.url,
       source: article.source.name,
-      description: article.description || "No description available.",
+      description: article.description,
       publishedAt: new Date(article.publishedAt).toLocaleString(),
     }));
 
@@ -34,7 +34,7 @@ export async function handler(event, context) {
       body: JSON.stringify({ articles }),
     };
   } catch (err) {
-    console.error("News API error:", err.message || err);
+    console.error("News API error:", err);
     return {
       statusCode: 500,
       body: JSON.stringify({ error: "Failed to fetch news" }),
