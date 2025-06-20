@@ -28,6 +28,8 @@ async function fetchDisasterNews() {
         content: article.description,
         timestamp: article.publishedAt
     });
+  addUpdates();
+
   });
   
 }
@@ -47,7 +49,6 @@ function addUpdates() {
         updatesContainer.prepend(updateDiv);
     });
 }
-addUpdates();
 
 
 const header = document.querySelector("header");
