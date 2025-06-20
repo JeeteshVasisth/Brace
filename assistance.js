@@ -24,18 +24,18 @@
         const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
         let words = text.split(" ");
         let index = 0;
-
-        if (index < words.length) {
-            outputElement.innerHTML += words[index] + " ";
-            index++;
-            setTimeout(printWordByWord, 300); // 300 ms delay
-    }
-        else{
-            outputElement.innerHTML = text || "I failed to load a response for you right now. please refresh...";
-            console.log(words)
-            console.log(index)
+        function printWordByWord{
+            if (index < words.length) {
+                outputElement.innerHTML += words[index] + " ";
+                index++;
+                setTimeout(printWordByWord, 300); // 300 ms delay
+                }
+            else{
+                outputElement.innerHTML = text || "I failed to load a response for you right now. please refresh...";
+                console.log(words)
+                console.log(index)
+            }
         }
-        
         console.log(data)
         console.log(text)
 
