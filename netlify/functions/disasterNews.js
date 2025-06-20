@@ -9,8 +9,13 @@ export async function handler(event, context) {
   } catch {
     // default to natural disaster
   }
-
-  const url = `https://newsapi.org/v2/top-headlines?category=science&q=${keyword}&language=en&sortBy=publishedAt&pageSize=5`;
+   const url = new URL("https://newsapi.org/v2/top-headlines");
+    url.searchParams.append("q", keyword);
+    url.searchParams.append("category", category);
+    url.searchParams.append("country", country);
+    url.searchParams.append("language", "en");
+    url.searchParams.append("pageSize", "10");
+  //const url = `https://newsapi.org/v2/top-headlinescategory=scienceq=${keyword}&language=en&sortBy=publishedAt&pageSize=5`;
 
   try {
     const response = await fetch(url, {
