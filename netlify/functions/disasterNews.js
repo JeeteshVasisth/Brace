@@ -1,5 +1,4 @@
 export async function handler(event, context) {
-  const API_KEY = process.env.NEWS_API_KEY;
 
   let keyword = "natural disaster";
   try {
@@ -16,7 +15,7 @@ export async function handler(event, context) {
   try {
     const response = await fetch(url, {
       headers: {
-        "X-Api-Key": API_KEY,
+        "X-Api-Key": process.env.NEWS_API_KEY,
       },
     });
 
