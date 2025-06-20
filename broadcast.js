@@ -31,7 +31,7 @@ function addUpdates() {
         const updateDiv = document.createElement('div');
         updateDiv.className = 'update';
         updateDiv.innerHTML = `
-            <a href=${update.link}>${update.title}</a>
+            <a href=${update.link} target="_blank">${update.title}</a>
             <p>${update.content}</p>
             <span class="timestamp">${update.timestamp}</span>
         `;
