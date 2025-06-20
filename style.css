@@ -99,7 +99,7 @@ header .navbar {
   padding-top: 100px;
   width: 90vw;
   height: 120vh;
-  background-image: url("https://s29.postimg.org/vho8xb2pj/landing_bg.jpg");
+  /* background-image: url("https://s29.postimg.org/vho8xb2pj/landing_bg.jpg");*/
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -243,7 +243,7 @@ p {
 }
 .ellipses__outer--thin:after {
   content: "";
-  background-image: url("https://s29.postimg.org/5h0r4ftkn/ellipses_dial.png");
+  /*background-image: url("https://s29.postimg.org/5h0r4ftkn/ellipses_dial.png");*/
   background-repeat: no-repeat;
   background-position: center;
   top: 0;
