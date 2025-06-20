@@ -33,6 +33,7 @@ header {
   z-index: 1;
   background-color: white;
   opacity: 90%;
+  color: black;
 }
 
 header .navbar {
