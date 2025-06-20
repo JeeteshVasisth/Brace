@@ -9,12 +9,7 @@ export async function handler(event, context) {
   } catch {
     // default to natural disaster
   }
-   const url = new URL("https://newsapi.org/v2/top-headlines");
-    url.searchParams.append("q", keyword);
-    url.searchParams.append("category", "science");
-    url.searchParams.append("language", "en");
-    url.searchParams.append("pageSize", "10");
-  //const url = `https://newsapi.org/v2/top-headlinescategory=scienceq=${keyword}&language=en&sortBy=publishedAt&pageSize=5`;
+   const url = `https://newsapi.org/v2/top-headlines?q=${encodeURIComponent(keyword)}&category=science&language=en&pageSize=${pageSize}`;
 
   try {
     const response = await fetch(url, {
