@@ -11,7 +11,7 @@ export async function handler(event, context) {
   }
    const url = new URL("https://newsapi.org/v2/top-headlines");
     url.searchParams.append("q", keyword);
-    url.searchParams.append("category", "Science");
+    url.searchParams.append("category", "science");
     url.searchParams.append("language", "en");
     url.searchParams.append("pageSize", "10");
   //const url = `https://newsapi.org/v2/top-headlinescategory=scienceq=${keyword}&language=en&sortBy=publishedAt&pageSize=5`;
