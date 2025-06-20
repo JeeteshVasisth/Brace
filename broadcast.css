@@ -24,6 +24,7 @@ h1 {
 
 header {
   position: sticky;
+  display: flex;
   top: 0;
   left: 0;
   width: 100%;
@@ -55,7 +56,6 @@ header .navbar {
   list-style: none;
 }
 .logo{
-  position: absolute;
   left: 20px;
 }
 .dropbtn {
@@ -73,8 +73,9 @@ header .navbar {
   color: #000;
   cursor: pointer;
   display: none;
-  position: absolute;
+ 
   right: 20px;
+  
 }
 
 #close-menu-btn {
