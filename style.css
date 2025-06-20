@@ -338,15 +338,8 @@ p {
     height: 100%;
     backdrop-filter: blur(5px);
   }
-  header.hide-navbar::before {
-  display: flex;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  justify-content: space-between;
-  
-}
-   header.hide-navbar::after {
+
+   header.hide-navbar {
      display: none;
      visibility: hidden;
      
