@@ -1,3 +1,4 @@
+const updates = [];
 async function fetchDisasterNews() {
   const keyword = "natural disaster";
 
@@ -8,6 +9,7 @@ async function fetchDisasterNews() {
   });
   const data = await res.json();
   console.log(data)
+  
   if (data.articles?.length) {
     data.articles.forEach(article => {
       updates.push({
@@ -20,9 +22,11 @@ async function fetchDisasterNews() {
     }  else {
     list.innerHTML = "<li>No recent disaster news found.</li>";
   }
+  console.log(updates)
+  addUpdates();
 }
 fetchDisasterNews();
-const updates = [];
+
 
 function addUpdates() {
     const updatesContainer = document.querySelector('.updates');
@@ -37,7 +41,7 @@ function addUpdates() {
         updatesContainer.prepend(updateDiv);
     });
 }
-addUpdates();
+
 
 
 const header = document.querySelector("header");
