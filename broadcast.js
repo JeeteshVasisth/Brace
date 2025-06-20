@@ -12,13 +12,14 @@ async function fetchDisasterNews() {
       updates.push({
           title: article.title,
           content: article.description,
-          timestamp: article.publishedAt
-    });
+          timestamp: article.publishedAt,
+          link: article.link
+    };
   } else {
     list.innerHTML = "<li>No recent disaster news found.</li>";
   }
 }
-
+console.log(data)
 const updates = [
     {
         title: "Landslide Alert",
@@ -38,7 +39,7 @@ function addUpdates() {
         const updateDiv = document.createElement('div');
         updateDiv.className = 'update';
         updateDiv.innerHTML = `
-            <h3>${update.title}</h3>
+            <a href=${update.link} target="_blank">${update.title}</a>
             <p>${update.content}</p>
             <span class="timestamp">${update.timestamp}</span>
         `;
