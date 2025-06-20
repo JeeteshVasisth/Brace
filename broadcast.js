@@ -1,3 +1,24 @@
+async function fetchDisasterNews() {
+  const keyword = "natural disaster";
+
+  const res = await fetch("/.netlify/functions/disasterNews", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ keyword }),
+  });
+  const data = await res.json();
+  if (data.articles?.length) {
+    data.articles.forEach(article => {
+      updates.push({
+          title: article.title;
+          content: article.description;
+          timestamp: article.publishedAt;
+      })
+    });
+  } else {
+    list.innerHTML = "<li>No recent disaster news found.</li>";
+  }
+}
 
 const updates = [
     {
