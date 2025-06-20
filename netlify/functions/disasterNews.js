@@ -1,7 +1,17 @@
 export async function handler(event, context) {
   const API_KEY = process.env.NEWS_API_KEY;
 
-  const url = `https://newsapi.org/v2/everything?q=natural%20disaster&language=en&sortBy=publishedAt&pageSize=5`;
+  let keyword = "natural disaster";
+  try {
+    const body = JSON.parse(event.body);
+    if (body.keyword) {
+      keyword = encodeURIComponent(body.keyword);
+    }
+  } catch {
+    // default to natural disaster
+  }
+
+  const url = `https://newsapi.org/v2/everything?q=${keyword}&language=en&sortBy=publishedAt&pageSize=5`;
 
   try {
     const response = await fetch(url, {
@@ -12,13 +22,12 @@ export async function handler(event, context) {
 
     const data = await response.json();
 
-    // Optional: return only useful info
     const articles = data.articles.map(article => ({
       title: article.title,
-      description: article.description,
       url: article.url,
       source: article.source.name,
-      publishedAt: article.publishedAt,
+      description: article.description,
+      publishedAt: new Date(article.publishedAt).toLocaleString(),
     }));
 
     return {
