@@ -16,10 +16,21 @@
         },
         body: JSON.stringify({ prompt: question }),
       });
-        const response = await result.response;
-        const text = response.text();
-        clearInterval(interval)
-        outputElement.innerHTML = text
+        const result = await fetch("/.netlify/functions/gemini", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ prompt: question }),
+        });
+        
+        
+        const data = await result.json();
+        clearInterval(interval);
+        
+        const text = data?.candidates?.[0]?.content?.parts?.[0]?.text || "No response.";
+        outputElement.innerHTML = text;
+
         
       } catch (e) {
         inputElement.value = ""
