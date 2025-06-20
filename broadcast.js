@@ -2,7 +2,6 @@ const updates = [];
 
 async function fetchDisasterNews() {
   const keywords = [
-  'disaster',
   "natural disaster",
   "disaster management"
   /*"earthquake",
