@@ -62,7 +62,7 @@ header .navbar {
 
 .navbar a,
 .dropbtn {
-  color: white;
+  color: black;
   text-decoration: none;
   transition: 0.2s ease;
 }
@@ -125,7 +125,7 @@ header .navbar {
 }
 
 #close-menu-btn {
-  color: white;
+  color: black;
   display: none;
   position: absolute;
   right: 20px;
@@ -161,8 +161,8 @@ header .navbar {
     flex-direction: column;
     width: 260px;
     height: 100vh;
-    background: black;
-    opacity: 75%;
+    background: white;
+    opacity: 100%;
     padding: 70px 40px 0;
     transition: left 0.15s ease;
   }
