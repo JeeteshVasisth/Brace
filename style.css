@@ -33,7 +33,7 @@ header {
   left: 0;
   width: 100%;
   padding: 20px;
-  z-index: 2;
+  z-index: 1;
   background-color: black;
   opacity: 90%;
 }
@@ -398,7 +398,7 @@ p {
   background-color: #949494;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgb(171, 171, 171,0.2);
-  z-index: 1;
+  z-index: 3;
 }
 
 .dropdown-content a {
