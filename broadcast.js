@@ -13,7 +13,7 @@ async function fetchDisasterNews() {
           title: article.title,
           content: article.description,
           timestamp: article.publishedAt;
-      })
+      });
     });
   } else {
     list.innerHTML = "<li>No recent disaster news found.</li>";
