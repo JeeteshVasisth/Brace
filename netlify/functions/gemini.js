@@ -1,7 +1,25 @@
 export async function handler(event, context) {
-  const API_KEY = process.env.GEMINI_API_KEY;
-  const prompt = JSON.parse(event.body).prompt;
+  let prompt;
 
+  try {
+    const body = JSON.parse(event.body);
+    prompt = body.prompt;
+  } catch (e) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ error: "Invalid JSON or missing prompt" }),
+    };
+  }
+
+  if (!prompt) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ error: "Prompt is required" }),
+    };
+  }
+
+  // Now call Gemini API safely
+  const API_KEY = process.env.GEMINI_API_KEY;
   const response = await fetch(
     "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=" + API_KEY,
     {
@@ -10,11 +28,7 @@ export async function handler(event, context) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        contents: [
-          {
-            parts: [{ text: prompt }],
-          },
-        ],
+        contents: [{ parts: [{ text: prompt }] }],
       }),
     }
   );
