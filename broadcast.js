@@ -1,9 +1,9 @@
 const updates = [
-    {
+   /* {
         title: "Landslide Alert",
         content: "A landslide has occurred in the area of Wayanad, Kerala. Number of dead rises to 288, rescue ops on war footing.",
         timestamp: "Updated 1 day ago",
-    },
+    },*/
     {
         title: "Flood Warning",
         content: "Heavy rains have caused flooding in parts of Delhi. Schools closed, major.",
@@ -22,7 +22,7 @@ async function fetchDisasterNews() {
   console.log(data)
   
  
-  data.forEach(article => {
+  data.articles.forEach(article => {
     updates.push({
         title: article.title,
         content: article.description,
@@ -32,7 +32,7 @@ async function fetchDisasterNews() {
   
 }
 fetchDisasterNews()
-
+console.log(updates)
 
 function addUpdates() {
     const updatesContainer = document.querySelector('.updates');
