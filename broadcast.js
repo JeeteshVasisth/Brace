@@ -22,7 +22,7 @@ async function fetchDisasterNews() {
   console.log(data)
   
  
-  data.articles.forEach(article => {
+  data.forEach(article => {
     updates.push({
         title: article.title,
         content: article.description,
