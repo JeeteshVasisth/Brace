@@ -3,11 +3,11 @@ const updates = [];
 async function fetchDisasterNews() {
   const keywords = [
   'natural disaster',
-  "earthquake",
+  /*"earthquake",
   "flood",
   "landslide",
   "hurricane",
-  "wildfire",
+  "wildfire",*/
 ];
 
 const keyword = keywords.join(" OR "); // creates "earthquake OR flood OR cyclone ..."
