@@ -10,13 +10,6 @@
         let question = "You are a disaster manager. You can always response to greetings nicely. If it is not related to disasters then say that you don't know the answer. Give the proper answer to the following question in 100 words: " + inputElement.value
         inputElement.value = ""
         const result = await fetch("/.netlify/functions/gemini", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ prompt: question }),
-      });
-        const result = await fetch("/.netlify/functions/gemini", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
