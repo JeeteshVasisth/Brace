@@ -19,7 +19,7 @@ async function fetchDisasterNews() {
     list.innerHTML = "<li>No recent disaster news found.</li>";
   }
 }
-
+fethDisasterNews()
 const updates = [
     {
         title: "Landslide Alert",
