@@ -56,6 +56,15 @@
     }
     getGeminiResponse("hi");
     submitButton.addEventListener("click", getGeminiResponse);
+    input.addEventListener("keypress", function(event) {
+      // If the user presses the "Enter" key on the keyboard
+          if (event.key === "Enter") {
+            // Cancel the default action, if needed
+            event.preventDefault();
+            // Trigger the button element with a click
+            submitButton.click();
+          }
+        });
     const header = document.querySelector("header");
     const menuBtn = document.querySelector("#menu-btn");
     const closeMenuBtn = document.querySelector("#close-menu-btn");
