@@ -27,6 +27,7 @@
         console.log(e)
         outputElement.innerHTML = "I failed to load a response for you right now..."
         }
+    }
     submitButton.addEventListener("click", run);
     const header = document.querySelector("header");
     const menuBtn = document.querySelector("#menu-btn");
