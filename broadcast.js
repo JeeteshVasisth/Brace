@@ -14,7 +14,7 @@ async function fetchDisasterNews() {
           content: article.description,
           timestamp: article.publishedAt,
           link: article.link
-    };
+    });
   } else {
     list.innerHTML = "<li>No recent disaster news found.</li>";
   }
