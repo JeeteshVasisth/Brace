@@ -7,6 +7,8 @@ async function fetchDisasterNews() {
     body: JSON.stringify({ keyword }),
   });
   const data = await res.json();
+  console.log(data)
+  
   if (data.articles?.length) {
     data.articles.forEach(article => {
       updates.push({
