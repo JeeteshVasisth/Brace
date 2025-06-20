@@ -12,7 +12,6 @@ html {
 }
 
 body {
-  height: 100vh;
   font-size: 1.4rem;
 }
 
@@ -55,7 +54,10 @@ header .navbar {
   gap: 40px;
   list-style: none;
 }
-
+.logo{
+  position: absolute;
+  left: 20px;
+}
 .dropbtn {
   color: #000;
   text-decoration: none;
@@ -71,6 +73,8 @@ header .navbar {
   color: #000;
   cursor: pointer;
   display: none;
+  position: absolute;
+  right: 20px;
 }
 
 #close-menu-btn {
@@ -87,7 +91,7 @@ header .navbar {
 }
 
 .container__item {
-  margin: 0 auto 40px;
+  margin: 0 auto;
 }
 
 .landing-page-container {
@@ -192,18 +196,10 @@ header .navbar {
 }
 
 
-header {
-    background-color: white;
-    color: white;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10%;
-}
+
 
 main {
-    margin-top: 60px;
+    margin-top: 0;
 }
 
 .broadcast {
@@ -274,18 +270,11 @@ main {
     transform: rotate(360deg);
   }
 }
-@keyframes ellipsesOrbit {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+
 
 @media screen and (max-width: 900px) {
   header {
-    padding: 10px 20px;
+    padding: 10px 0;
   }
 
   header.show-mobile-menu::before {
