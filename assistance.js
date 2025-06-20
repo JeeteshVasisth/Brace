@@ -28,22 +28,21 @@
             if (index < words.length) {
                 outputElement.innerHTML += words[index] + " ";
                 index++;
-                console.log(outputElement)
+                console.log(outputElement);
                 console.log(outputElement.innerHTML)
-                console.log(words)
-                console.log(index)
+                console.log(words);
+                console.log(index);
                 setTimeout(printWordByWord, 50); // 300 ms delay
                 
                 
                 }
             else{
                 outputElement.innerHTML = text || "I failed to load a response for you right now. please refresh...";
-                console.log(words)
-                console.log(index)
+                console.log(words);
+                console.log(index);
             }
         }
-        console.log(data)
-        console.log(text)
+        console.log(typeof text);
 
         
       } catch (e) {
