@@ -17,12 +17,16 @@
           body: JSON.stringify({ prompt: question }),
         });
         
-        
         const data = await result.json();
         clearInterval(interval);
         
-        const text = data?.candidates?.[0]?.content?.parts?.[0]?.text || "No response.";
-        outputElement.innerHTML = text;
+        // 👇 Properly access the Gemini response text
+        const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+        
+        outputElement.innerHTML = text || "No response from Gemini.";
+
+        
+    
 
         
       } catch (e) {
