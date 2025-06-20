@@ -26,7 +26,8 @@
         outputElement.innerHTML = text || "No response from Gemini.";
 
         
-    
+        console.log(data)
+        console.log(text)
 
         
       } catch (e) {
@@ -34,6 +35,7 @@
         clearInterval(interval)
         console.log(e)
         outputElement.innerHTML = "I failed to load a response for you right now..."
+          
         }
     }
     submitButton.addEventListener("click", getGeminiResponse);
