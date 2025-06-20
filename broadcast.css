@@ -22,13 +22,16 @@ h1 {
   font-size: 2.4rem;
 }
 
+
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 20px;
-  z-index: 1000000;
+  z-index: 1;
+  background-color: black;
+  opacity: 90%;
 }
 
 header .navbar {
@@ -38,7 +41,6 @@ header .navbar {
   margin: 0 auto;
   justify-content: space-between;
 }
-
 .navbar .logo {
   color: #000;
   font-size: 2.1rem;
