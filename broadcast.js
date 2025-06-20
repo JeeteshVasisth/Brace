@@ -1,7 +1,21 @@
 const updates = [];
 
 async function fetchDisasterNews() {
-  const keyword = "natural disaster";
+  const keywords = [
+  "earthquake",
+  "flood",
+  "cyclone",
+  "tsunami",
+  "volcano",
+  "landslide",
+  "hurricane",
+  "wildfire",
+  "drought",
+  "tornado"
+];
+
+const keyword = keywords.join(" OR "); // creates "earthquake OR flood OR cyclone ..."
+
 
   const res = await fetch("/.netlify/functions/disasterNews", {
     method: "POST",
